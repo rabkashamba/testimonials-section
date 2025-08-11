@@ -35,7 +35,7 @@ body {
 
 
 main {
-    width: clamp(32rem, 90%, 37.5rem);
+    width: clamp(32rem, 95%, 37.5rem);
     margin-block: calc(1.6rem + 8vh);
     margin-inline: auto;
 }
@@ -134,10 +134,12 @@ main {
 .attribution  { 
     font-size: calc(1em - 2 / 13 * 1em);
     text-align: center;
-    text-decoration: none;
  }
 
 
 .attribution a { 
+    text-decoration: none;
     color: var(--Link);
  }
+
+
