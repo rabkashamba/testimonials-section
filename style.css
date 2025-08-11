@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+--Purple-50: hsl(260, 100%, 95%);
+--Purple-300: hsl(264, 82%, 80%);
+--Purple-500: hsl(263, 55%, 52%);
+--White: hsl(0, 0%, 100%);
+--Grey-100: hsl(214, 17%, 92%);
+--Grey-200: hsl(0, 0%, 81%);
+--Grey-400: hsl(224, 10%, 45%);
+--Grey-500: hsl(217, 19%, 35%);
+--Dark-blue: hsl(219, 29%, 14%);
+--Black: hsla(0, 0%, 7%, 0.2);
+--Link: hsl(228, 45%, 44%);
+}
+
+html {
+     font-size: 62.5%;
+}
+
+body, html {
+    padding: 0;
+    margin-block: 0;
+    margin-inline: 0;
+}
+
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: calc(1rem + 30%);
+    background-color: var(--Purple-50);
+    color: var(--Grey-400);
+    font-weight: 500;
+}
+
+
+main {
+    width: clamp(32rem, 90%, 37.5rem);
+    margin-block: calc(1.6rem + 8vh);
+    margin-inline: auto;
+}
+
+
+/* General Card Styles */
+
+.testimony-card {
+    width: calc(100% - 8em);
+    margin-block: calc(1.5em + 1vh);
+    margin-inline: auto;
+    padding: calc(1em + 4%);
+    border-radius: calc(0.2em + 1%);
+    box-shadow: 2em 2em 4em var(--Black);
+}
+
+
+/* General Testifier Details Styles */
+
+.testifier-info {
+    display: flex;
+    align-items: center;
+    gap: calc(1em + 1%);
+}
+
+
+.testifier-info img {
+    height: calc(1.3em + 5%);
+    width: calc(1.3em + 5%);
+    border-radius: 50%;
+}
+
+.testifier-info p:first-of-type {
+    margin-block-end: 0;
+    font-weight: 600;
+    
+}
+
+.testifier-info p:last-of-type {
+    margin-block-start: calc(0.1em + 0.4vh);
+    font-style: italic;
+}
+
+
+
+/* Specific Card Styles Start Here */
+
+    /* Card One */
+.testimony-card:first-of-type {
+    background-color: var(--Purple-500);
+    color: var(--White);
+}
+
+.testimony-card:first-of-type img {
+    border: 0.2em solid var(--Purple-300);
+}
+
+
+    /* Card Two */
+.testimony-card:nth-of-type(2) {
+    background-color: var(--Grey-500);
+    color: var(--White);
+}
+
+
+
+/* Card Three */
+.testimony-card:nth-of-type(3) {
+    background-color: var(--White);
+}
+
+
+
+/* Card Four */
+.testimony-card:nth-of-type(4) {
+    background-color: var(--Dark-blue);
+    color: var(--Grey-100);
+}
+
+.testimony-card:nth-of-type(4) img {
+    border: 0.2em solid var(--Purple-500);
+}
+
+
+
+/* Card Five */
+.testimony-card:last-of-type {
+    background-color: var(--White);
+}
+
+
+
+
+ /* Customized Footer Styles */
+
+.attribution  { 
+    font-size: calc(1em - 2 / 13 * 1em);
+    text-align: center;
+    text-decoration: none;
+ }
+
+
+.attribution a { 
+    color: var(--Link);
+ }
