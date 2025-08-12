@@ -63,8 +63,8 @@ main {
 
 
 .testifier-info img {
-    height: calc(1.3em + 5%);
-    width: calc(1.3em + 5%);
+    height: clamp(1.3em, 10vw, 2em);
+    width:  clamp(1.3em, 10vw, 2em);
     border-radius: 50%;
 }
 
@@ -101,12 +101,10 @@ main {
 }
 
 
-
 /* Card Three */
 .testimony-card:nth-of-type(3) {
     background-color: var(--White);
 }
-
 
 
 /* Card Four */
@@ -120,12 +118,10 @@ main {
 }
 
 
-
 /* Card Five */
 .testimony-card:last-of-type {
     background-color: var(--White);
 }
-
 
 
 
@@ -142,4 +138,67 @@ main {
     color: var(--Link);
  }
 
+
+
+
+ /* Desktop Design Start Here */
+ 
+ @media screen and ( min-width: 64rem) {
+    
+    main {
+        margin-block: calc(2rem + 12vh);
+        width: clamp(64rem, 80%, 140rem);
+        display: grid;
+        align-items: stretch;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "cardone cardone cardtwo cardfive"
+        "cardthree cardfour cardfour cardfive"
+        ;
+        gap: calc(1em + 1%);
+    }
+
+    .testimony-card {
+        width: auto;
+        margin-block: 0;
+        margin-inline:0;
+        position: relative;
+        z-index: -1;
+    }
+
+    
+    .testimony-card:first-of-type {grid-area: cardone;}
+    .testimony-card:nth-of-type(2) {grid-area: cardtwo;}
+    .testimony-card:nth-of-type(3) {grid-area: cardthree;}
+    .testimony-card:nth-of-type(4) {grid-area: cardfour;}
+    .testimony-card:last-of-type {grid-area: cardfive;}
+
+
+    .testimony-card:first-of-type::before {
+        content: "\201C";
+        color: var(--Purple-300);
+        font-family:  Arial, Helvetica, sans-serif;
+        font-size: calc(40rem + 12vh);
+        position: absolute;
+        inset-block-start: -8rem;
+        inset-inline-end: 4rem;
+        opacity: 0.5;
+        z-index:-1;
+    }
+       
+
+    .testimony-card:is(:nth-of-type(2), :nth-of-type(3), :nth-of-type(5)) {
+        display: grid;
+        grid-template-rows: minmax(5%, 10%) auto;
+        
+    }
+
+
+    .testimony-card:is(:nth-of-type(2), :nth-of-type(3), :nth-of-type(5)) .testimony-text p {
+        height: 100%;
+        overflow: hidden;
+    }
+
+
+ }
 
