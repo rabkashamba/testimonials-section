@@ -149,11 +149,10 @@ main {
         margin-block: calc(2rem + 12vh);
         width: clamp(64rem, 80%, 140rem);
         display: grid;
-        align-items: stretch;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr 1fr 1fr 1fr 1fr);
         grid-template-areas: 
-        "cardone cardone cardtwo cardfive"
-        "cardthree cardfour cardfour cardfive"
+        "cardone cardone cardone cardone cardone cardone cardtwo cardtwo cardfive cardfive"
+        "cardthree cardthree cardfour cardfour cardfour cardfour cardfour cardfour cardfive cardfive"
         ;
         gap: calc(1em + 1%);
     }
@@ -186,19 +185,5 @@ main {
         z-index:-1;
     }
        
-
-    .testimony-card:is(:nth-of-type(2), :nth-of-type(3), :nth-of-type(5)) {
-        display: grid;
-        grid-template-rows: minmax(5%, 10%) auto;
-        
-    }
-
-
-    .testimony-card:is(:nth-of-type(2), :nth-of-type(3), :nth-of-type(5)) .testimony-text p {
-        height: 100%;
-        overflow: hidden;
-    }
-
-
  }
 
